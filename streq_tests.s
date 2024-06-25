@@ -100,7 +100,7 @@ streq_tests_F:
 streq_tests_P:
 .asciiz "P"
 streq_tests_NEWL:
-.byte 13,10
+.byte 13,10,0
 
 # test cases data
 test1a:

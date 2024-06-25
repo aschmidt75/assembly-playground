@@ -2,10 +2,13 @@
 .import strlen_tests.s
 .import streq.s
 .import streq_tests.s
+.import utoa.s
+.import utoa_tests.s
 
 .text
 main:
 
+jal     _utoa_tests
 jal     _streq_tests
 jal     _strlen_tests
 

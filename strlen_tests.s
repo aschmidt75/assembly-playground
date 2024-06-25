@@ -73,7 +73,7 @@ strlen_tests_F:
 strlen_tests_P:
 .asciiz "P"
 strlen_tests_NEWL:
-.byte 13,10
+.byte 13,10,0
 
 # test cases data
 teststr1:
