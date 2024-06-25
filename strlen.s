@@ -1,7 +1,7 @@
 .text
 
 .globl _strlen
-# _strlen computes the length of a zero-based string
+# _strlen computes the length of a zero-terminated string
 # In: 
 # - a0: addr of string
 # Out:
