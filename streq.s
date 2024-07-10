@@ -20,18 +20,18 @@ lb      s1, 0(a1)
 lb      s2, 0(a2)
 sub     s3, s2, s1
 bnez    s3, L_streq_neq         # *a1 != *a2, not equal
-add     s3, s2, s1              # if (*a1) + (*a2) == 0, we reached eos
-beqz    s3, L_streq_eq
+beqz    s1, L_streq_eq          # if (*a1) == 0 then (*a2) must also == 0, and both reached eos
 addi    a1, a1, 1
 addi    a2, a2, 1
 j       L_streq_loop
 
 L_streq_neq:
-addi    a0, zero, 1
+li      a0, 1
 j       L_streq_done
 
 L_streq_eq:
-add     a0, zero, zero
+li      a0, 0
+
 
 L_streq_done:
 
